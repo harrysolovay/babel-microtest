@@ -35,15 +35,15 @@ test('implicit return test title', t => {
   implicitReturnTest(
     {
       source: `
-      function add(a, b) {
-        a + b
-      }
-    `,
+        function add(a, b) {
+          a + b
+        }
+      `,
       expected: `
-      function add(a, b) {
-        return a + b
-      }
-    `,
+        function add(a, b) {
+          return a + b
+        }
+      `,
     },
     t,
   )

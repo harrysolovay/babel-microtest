@@ -14,6 +14,8 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-syntax-jsx": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4",
     "ava": "^1.2.0",
     "babel-plugin-implicit-function": "^0.1.1",
     "babel-plugin-implicit-return": "^1.0.1",
@@ -34,6 +36,7 @@
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
+  "release": {},
   "scripts": {
     "test": "ava",
     "clean": "rm -rf lib",

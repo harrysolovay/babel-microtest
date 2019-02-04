@@ -24,7 +24,7 @@ import createTest from 'babel-microtest'
 
 // test options (in this case, we're gonna test 'babel-plugin-implicit-return'):
 const options = {
-  plugins: ['implicit-return'], // or import above and pass the plugin directly
+  plugins: ['implicit-return'], // or import and pass the plugin directly
 }
 
 // create the test instance

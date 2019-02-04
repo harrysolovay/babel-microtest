@@ -1,5 +1,7 @@
 # babel-microtest
 
+[![Build Status](https://travis-ci.org/harrysolovay/babel-microtest.svg?branch=master)](https://travis-ci.org/harrysolovay/babel-microtest)
+
 `babel-microtest` is a way of checking that your Babel 7 presets/plugins transform code as expected. It was created to solve **2 key problems** relating to plugin development:
 
 1. interoperability with any testing framework

@@ -1,6 +1,8 @@
 import test from 'ava'
 import createTest from './src'
 
+console.log('running tests')
+
 const reactRequireTest = createTest({
   plugins: ['@babel/plugin-syntax-jsx', 'react-require'],
 })

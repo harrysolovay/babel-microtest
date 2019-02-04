@@ -1,5 +1,5 @@
 {
-  "name": "babel-transform-tester",
+  "name": "babel-microtest",
   "description": "Framework-agnostic, minimal testing for Babel 7 plugins",
   "version": "0.0.0-development",
   "main": "lib/index.js",

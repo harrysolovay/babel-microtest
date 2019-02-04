@@ -10,7 +10,7 @@
 ## Installation
 
 ```shell
-$ npm install babel-microtest
+$ npm i -D babel-microtest
 ```
 
 ## Usage

@@ -1,0 +1,39 @@
+{
+  "name": "babel-transform-tester",
+  "description": "Framework-agnostic, minimal testing for Babel 7 plugins",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "files": [
+    "lib/index.js",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "ava": "^1.2.0",
+    "babel-plugin-implicit-function": "^0.1.1",
+    "babel-plugin-implicit-return": "^1.0.1",
+    "babel-plugin-react-require": "^3.1.1",
+    "esm": "^3.2.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.2.2"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "scripts": {
+    "test": "ava",
+    "clean": "rm -rf lib",
+    "build": "babel src --out-dir lib --plugins=@babel/plugin-transform-modules-commonjs",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "diff": "^4.0.1"
+  }
+}

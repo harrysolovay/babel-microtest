@@ -1,8 +1,6 @@
 import test from 'ava'
 import createTest from './src'
 
-console.log('running tests')
-
 const reactRequireTest = createTest({
   plugins: ['@babel/plugin-syntax-jsx', 'react-require'],
 })
@@ -11,12 +9,12 @@ test('react-require', t => {
   reactRequireTest(
     {
       source: `
-        const MyComponent = () =>
+        const MyComponent = (a, b) =>
           <div>JSX</div>
       `,
       expected: `
         import React from 'react'
-        const MyComponent = () =>
+        const MyComponent = (a, b) =>
           <div>JSX</div>
       `,
     },

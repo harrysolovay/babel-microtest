@@ -2,18 +2,18 @@ import {transform} from '@babel/core'
 import {diffSentences} from 'diff'
 import 'colors'
 
+// prettier-ignore
 const strip = str =>
   str
-    .replace(/\r?\n|\r| +?/g, '')
+    .replace(/\r?\n|\r|,| +?/g, '')
+    .replace(/"|'/g, "\'")
     .split(';')
     .join('')
-    .replace(/"|'/g, "\\'")
 
 const equal = (a, b) => a == b
 
 export default options => {
   const transformWithOptions = source => transform(source, options).code
-
   return ({source, expected}, {pass, fail}) => {
     const transformed = transformWithOptions(source)
     const processed = [transformed, expected].map(strip)
